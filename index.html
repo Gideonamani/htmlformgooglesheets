@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Add Lecture Notes</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Overlock|Overlock+SC" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<style type="text/css">
+			.tab-pane .form-group {
+			    margin: 4px 0 6px 0;
+			}
+			#submit-form-bottom {
+			    margin-top: 18px;
+			}
+			.mabina-multiple {
+			    background: aliceblue;
+			    padding: 10px;
+			    margin-bottom: 18px;
+			    border-radius: 4px;
+			}
+			div.panel-heading {
+				padding: 0;
+			}
+			div.panel-heading a{
+				padding: 10px 15px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header logo">
+			      <a class="navbar-brand" href="https://vk.com/club58832439">
+			        <img alt="Brand" src="assets/images/logo.jpg" title="Go to the VK page!">
+			      </a>
+			    </div>
+			  </div>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="row">
+				<form class="form-horizontal" style="padding: 0 10px;" accept-charset="UTF-8" id="fillthesheet">
+				<!-- action="https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec" -->
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">Subject Name</label>
+				    <div class="col-sm-10">
+				      <select class="form-control" name="Subject" id="Subject">
+					      <option>Авиационный Английский </option>
+						  <option>БЖД</option>
+						  <option>БИУС </option>
+						  <option>Методы Современных Диагностики </option>
+						  <option>Конструкция и Прочность ВС </option>
+						  <option>Конструкция и Прочность АД </option>
+						  <option>Теория Надежности </option>
+						  <option>Теория АД </option>
+						  <option>Физ-Культура </option>
+						</select>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="ClassNo" class="col-sm-2 control-label">Class No.</label>
+				    <div class="col-sm-10">
+				      <input type="number" class="form-control" id="ClassNo" placeholder="Class No." min="0" max="100" step="1" name="Class Number">
+				    </div>
+				  </div>
+
+				<!-- Tab area for multiple input types Style4 -->
+				<div class="col-md-12 mabina-multiple">
+					<div class="col-sm-2">
+						<label>Select a file a type</label>
+					</div>
+
+					<div class="col-sm-10">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          Link for DOC
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="DOCFileInput" placeholder="http://url-to-the-file" name="Link DOC">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingTwo">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						          Link for MD
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="MDFileInput" placeholder="http://url-to-the-file" name="Link MD">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          Link for PDF
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="PDFFileInput" placeholder="http://url-to-the-file" name="Link PDF">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFour">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						          Link for AUDIO
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="AUDIOFileInput" placeholder="http://url-to-the-file" name="Link AUDIO">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFive">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						          Link for VIDEO
+						        </a>
+					          </h4>
+						    </div>
+						    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="VIDEOFileInput" placeholder="http://url-to-the-file" name="Link VIDEO">
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+
+
+
+				  <div class="form-group">
+				    <div class="col-sm-offset-10 col-sm-2" style="text-align: center;" id="submit-form-bottom">
+				      <button type="submit" class="btn btn-primary">Submit the Note</button>
+				    </div>
+				  </div>
+				</form>
+				<div>
+					<p id="confirming" class="bg-success" style="display: none;">Form has been successfully submitted!</p>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		<footer class="footer" style="margin-top: 30px;
+									bottom: 0;
+									width: 100%;
+									height: 85px;
+									background-color: #f5f5f5;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-6">	
+							<p class="proudly">Proudly Hosted on <a href="https://github.com">GitHub</a>.</p>
+						</div>
+						<div class="col-md-6">	
+							<p class="proudly cprt-year"> © <span id="current-year">2016</span></p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</footer>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			$( "#fillthesheet" ).submit(function( event ) {
+			  event.preventDefault();
+			  // console.log(event);
+			  
+			  var showConfirmation = function (data){
+			  	$('#confirming').fadeIn(320);
+			  }
+
+			  var scriptUrl = "https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec";
+			  scriptUrl += '?' + $.param({
+				  'Subject': $('#Subject').val(),
+				  'Class Number': $('#ClassNo').val(),
+				  'Date': new Date(),
+				  'Uploader': Math.floor(Math.random() * 17),   //Change this later
+				  'Link DOC': $('#DOCFileInput').val(),
+				  'Link MD': $('#MDFileInput').val(),
+				  'Link PDF': $('#PDFFileInput').val(),
+				  'Link AUDIO': $('#AudioFileInput').val(),
+				  'Link VIDEO': $('#VideoFileInput').val()
+				});
+			  
+			  $.ajax({
+			  	  crossDomain: true,
+				  url: scriptUrl,
+				  method: "GET",
+				  dataType: "jsonp",
+				  success: showConfirmation
+				});
+			});
+		</script>
+	</body>
+</html>

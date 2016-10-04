@@ -164,12 +164,12 @@
 
 				  <div class="form-group">
 				    <div class="col-sm-offset-10 col-sm-2" style="text-align: center;" id="submit-form-bottom">
-				      <button type="submit" class="btn btn-primary">Submit the Note</button>
+				      <button type="submit" class="btn btn-primary">Submit the Form</button>
 				    </div>
 				  </div>
 				</form>
 				<div>
-					<p id="confirming" class="bg-success" style="display: none;">Form has been successfully submitted!</p>
+					<p id="confirming" class="bg-success" style="display: none;">Form has been successfully submitted! Thanks for your input. </p>
 				</div>
 			</div>
 		</div>
@@ -206,7 +206,7 @@
 			  // console.log(event);
 			  
 			  var showConfirmation = function (data){
-			  	$('#confirming').fadeIn(320);
+			  	$('#confirming').fadeIn(320).delay(1800).fadeOut(500);
 			  }
 
 			  var scriptUrl = "https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec";
@@ -218,8 +218,8 @@
 				  'Link DOC': $('#DOCFileInput').val(),
 				  'Link MD': $('#MDFileInput').val(),
 				  'Link PDF': $('#PDFFileInput').val(),
-				  'Link AUDIO': $('#AudioFileInput').val(),
-				  'Link VIDEO': $('#VideoFileInput').val()
+				  'Link AUDIO': $('#AUDIOFileInput').val(),
+				  'Link VIDEO': $('#VIDEOFileInput').val()
 				});
 			  
 			  $.ajax({

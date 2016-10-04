@@ -77,6 +77,11 @@ That's it. Host your page and tell others to check it out and fill it out.
 
 
 ## Tribute
-Thanks to these wonderful people's blog posts for giving me supersonic lift head-start.
-* GS - dfsdf
-* JSONP Handler - sdfs
+Thanks to these wonderful people's blog posts for giving me a supersonic head-start.
+* Martin Hawksey
+  - [Link to Blog Post](https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/)
+  - [Link to Gist](https://gist.github.com/mhawksey/1276293)
+  
+* Amit Agarwal 
+  - [Make AJAX Request to Google Script Web App with jQuery](https://ctrlq.org/code/20197-jquery-ajax-call-google-script)
+

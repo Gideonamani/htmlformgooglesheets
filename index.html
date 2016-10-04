@@ -4,34 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Add Lecture Notes</title>
+		<title>HTML Form Google Spreadsheet</title>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- <link href="https://fonts.googleapis.com/css?family=Overlock|Overlock+SC" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-		<style type="text/css">
-			.tab-pane .form-group {
-			    margin: 4px 0 6px 0;
-			}
-			#submit-form-bottom {
-			    margin-top: 18px;
-			}
-			.mabina-multiple {
-			    background: aliceblue;
-			    padding: 10px;
-			    margin-bottom: 18px;
-			    border-radius: 4px;
-			}
-			div.panel-heading {
-				padding: 0;
-			}
-			div.panel-heading a{
-				padding: 10px 15px;
-				display: block;
-			}
-		</style>
 	</head>
 	<body>
 		<header>
@@ -47,131 +25,59 @@
 		</header>
 
 		<div class="container">
-			<div class="row">
-				<form class="form-horizontal" style="padding: 0 10px;" accept-charset="UTF-8" id="fillthesheet">
-				<!-- action="https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec" -->
-				  <div class="form-group">
-				    <label for="inputEmail3" class="col-sm-2 control-label">Subject Name</label>
-				    <div class="col-sm-10">
-				      <select class="form-control" name="Subject" id="Subject">
-					      <option>Авиационный Английский </option>
-						  <option>БЖД</option>
-						  <option>БИУС </option>
-						  <option>Методы Современных Диагностики </option>
-						  <option>Конструкция и Прочность ВС </option>
-						  <option>Конструкция и Прочность АД </option>
-						  <option>Теория Надежности </option>
-						  <option>Теория АД </option>
-						  <option>Физ-Культура </option>
-						</select>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="ClassNo" class="col-sm-2 control-label">Class No.</label>
-				    <div class="col-sm-10">
-				      <input type="number" class="form-control" id="ClassNo" placeholder="Class No." min="0" max="100" step="1" name="Class Number">
-				    </div>
-				  </div>
 
-				<!-- Tab area for multiple input types Style4 -->
-				<div class="col-md-12 mabina-multiple">
-					<div class="col-sm-2">
-						<label>Select a file a type</label>
-					</div>
+		<h1> Example of how to fill a Google Spreedsheet using a web form. </h1>
 
-					<div class="col-sm-10">
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<form id="fillthesheet">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Favourite Fruit</label>
+			    <input type="text" class="form-control" id="FavFruit" placeholder="Fruit, e.g. orange, ovacado...">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">How many fruits do you it per day</label>
+			    <input type="number" class="form-control" id="NumFruits" placeholder="1 or 2 or 3....." min="0" max="80">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Favourite Color </label>
+			    <input type="text" class="form-control" id="FavColor" placeholder="Yellow or Turquoise or ....">
+			  </div>
+			  
+			  <div class="checkbox">
+			    <label>
+			      <input id="LikeBananas" type="checkbox" value="Yes"> I like bananas
+			    </label>
+			  </div>
+			  <div class="checkbox">
+			    <label>
+			      <input id="LikeApples" type="checkbox" value="No"> You don't like apples
+			    </label>
+			  </div>
 
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingOne">
-						      <h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						          Link for DOC
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-						      <div class="panel-body">
-						        <input type="text" class="form-control" id="DOCFileInput" placeholder="http://url-to-the-file" name="Link DOC">
-						      </div>
-						    </div>
-						  </div>
+			  <div class="form-group">
+			  	<div><label> Number of seasons in a year </label></div>
+			    <label class="radio-inline">
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4"> 4
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option5"> 5
+				</label>
+			  </div>	
 
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingTwo">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						          Link for MD
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="panel-body">
-						        <input type="text" class="form-control" id="MDFileInput" placeholder="http://url-to-the-file" name="Link MD">
-						      </div>
-						    </div>
-						  </div>
-
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingThree">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						          Link for PDF
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-						      <div class="panel-body">
-						        <input type="text" class="form-control" id="PDFFileInput" placeholder="http://url-to-the-file" name="Link PDF">
-						      </div>
-						    </div>
-						  </div>
-
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingFour">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-						          Link for AUDIO
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-						      <div class="panel-body">
-						        <input type="text" class="form-control" id="AUDIOFileInput" placeholder="http://url-to-the-file" name="Link AUDIO">
-						      </div>
-						    </div>
-						  </div>
-
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingFive">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-						          Link for VIDEO
-						        </a>
-					          </h4>
-						    </div>
-						    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-						      <div class="panel-body">
-						        <input type="text" class="form-control" id="VIDEOFileInput" placeholder="http://url-to-the-file" name="Link VIDEO">
-						      </div>
-						    </div>
-						  </div>
-						</div>
-					</div>
-				</div>
-
-
-
-				  <div class="form-group">
-				    <div class="col-sm-offset-10 col-sm-2" style="text-align: center;" id="submit-form-bottom">
-				      <button type="submit" class="btn btn-primary">Submit the Form</button>
-				    </div>
-				  </div>
-				</form>
-				<div>
-					<p id="confirming" class="bg-success" style="display: none;">Form has been successfully submitted! Thanks for your input. </p>
-				</div>
-			</div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<div class="col-md-12">
+				<p id="confirming" class="bg-success" style="display: none; margin-top: 20px;">Wohoooooo all was successful</p>
+				<p id="sorrow" class="bg-danger" style="display: none; margin-top: 20px;">Oh ooh something went wrong</p>
+			</div>		
 		</div>
 		
 
@@ -201,25 +107,37 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<script type="text/javascript">
+
+		//The script
+
 			$( "#fillthesheet" ).submit(function( event ) {
 			  event.preventDefault();
 			  // console.log(event);
 			  
+			  //have a paragraph fadeIn and appear for 1.8 secs ro cnfirm the form submission then fadeOut
 			  var showConfirmation = function (data){
 			  	$('#confirming').fadeIn(320).delay(1800).fadeOut(500);
+			  	console.log(data);
 			  }
 
-			  var scriptUrl = "https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec";
+			  var showSorrow = function(data) {
+			  	$('#sorrow').fadeIn(320).delay(2800).fadeOut(500);
+			  	console.log(data);
+			  }
+
+			  
+			  // Paste the url of your web app scriptUrl from step 2 below
+
+			  var scriptUrl = "https://script.google.com/macros/s/AKfycbwPpM8GRsH3jQ_0PUMWx0YL7N3bfJtILoI_J3rgYHiyqtqLSaY/exec";
 			  scriptUrl += '?' + $.param({
-				  'Subject': $('#Subject').val(),
-				  'Class Number': $('#ClassNo').val(),
-				  'Date': new Date(),
-				  'Uploader': Math.floor(Math.random() * 17),   //Change this later
-				  'Link DOC': $('#DOCFileInput').val(),
-				  'Link MD': $('#MDFileInput').val(),
-				  'Link PDF': $('#PDFFileInput').val(),
-				  'Link AUDIO': $('#AUDIOFileInput').val(),
-				  'Link VIDEO': $('#VIDEOFileInput').val()
+			  	// Make sure the key: value parameters are in the following order
+			  	// SpreadsheetColumnHeader: input'sValue
+				  'Favourite Fruit': $('#FavFruit').val(),
+				  'Number Fruits': $('#NumFruits').val(),
+				  'Favourite Color': $('#FavColor').val(),
+				  'Likes Bananas?': $('#LikeBananas').val(),
+				  'Likes Apples?': $('#LikeApples').val(),
+				  'Seasons In a Year': $("[name = 'inlineRadioOptions']").val()
 				});
 			  
 			  $.ajax({
@@ -227,7 +145,8 @@
 				  url: scriptUrl,
 				  method: "GET",
 				  dataType: "jsonp",
-				  success: showConfirmation
+				  success: showConfirmation,
+				  error: showSorrow
 				});
 			});
 		</script>

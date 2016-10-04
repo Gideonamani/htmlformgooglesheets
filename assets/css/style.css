@@ -30,7 +30,7 @@ body {
 }
 
 
-p#confirming {
+p#confirming, p#sorrow {
     display: block;
     padding: 10px;
     color: black;

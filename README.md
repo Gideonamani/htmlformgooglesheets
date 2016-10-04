@@ -1,6 +1,6 @@
 # How to fill a google spreadsheet asynchronously using a form and input fields you have on your webpage markup
 
-I have been trying to figure this out for a while, and after googling away for the last week and a half or so I think I've been able to put the pieces together on how you can successfully and _unseccurely_ collect **insensitive** user information from your website page and populate a google spreadsheet.
+I have been trying to figure this out for a while, and after googling away for the last week and a half or so I think I've been able to put the pieces together on how you can successfully and _insecurely_ collect **insensitive** user information from your website page and populate a google spreadsheet.
 #### Early warning:
 In all honestly it might be way easier to just set up a google form and direct users to the form link and have the form submit the results to a spreadsheet. 
 Also tThis should not under any circumstances be treated as an alternative to a proper database.

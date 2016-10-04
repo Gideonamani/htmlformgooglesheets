@@ -8,14 +8,16 @@ Also tThis should not under any circumstances be treated as an alternative to a 
 That being said, I think this is a very easy and highly customizable way to collect data from different sources and have it fill up a spreadsheet and from there the possibilities are endless.
 
 ### Step 1
-Create a Google Spreadseet and publish it. After publishing it you'll be notified to what url you can use to access your spread sheet. The url will contain the spreadsheet id. Which we'll use in the following step.
-
+Create a Blank Google Spreadseet and publish it. After publishing it you'll be notified to what url you can use to access your spread sheet. The url will contain the spreadsheet id. Which we'll use in the following step.
+Here's a [link to a spreadsheet](https://docs.google.com/spreadsheets/d/1_LLzvAwPKAnLSqCT6eO9n44YrkFwKyJ5dMBwqn1Kw9M/pubhtml) I created and published. You might try to use it as a reference.
+As you can tell from the url, the SpreadsheetID is **1_LLzvAwPKAnLSqCT6eO9n44YrkFwKyJ5dMBwqn1Kw9M**
 
 ### Step  2
 Create a Google Script Macro by going Tools > Script editor...
-copy the code from the GSCRIPT file in this repo and post it in your spreadsheet's script editor.
-Change the sheet variable if need be and the spreadsheetID to your spreadsheetID. Save the script and publish it as a webapp. Copy the script url, it'll be used in step No. 4.
-
+Clear out any deafult lines of code in the editor and copy the code from the GSCRIPT file in this repo and post it in your spreadsheet's script editor.
+Change the sheet variable, if need be, and the SpreadsheetID to your SpreadsheetID. Save the script. You'll be prometed to write a project name at first. Then Run > setup. Give authorization for the script to access the data in the spreadsheet.
+Go to Publish > Deploy as web app... To make sure anyone can post data into your spreadsheet through your html form, you'll need to set the execution of the app by you (it will say 'Me' in the deploy as web app prompt). Then make sure anyone can access the app evn anonymous to ensure that anyone can post to the sheet. You can make restriction as needed. Copy the script url of your now deployed web app, it'll be used in step No. 4.
+ScriptURL: https://script.google.com/macros/s/AKfycbwPpM8GRsH3jQ_0PUMWx0YL7N3bfJtILoI_J3rgYHiyqtqLSaY/exec
 
 ### Step 3
 Create in the markup of your html page a form with inputs. Make sure you give unique ids to each input field in the form.

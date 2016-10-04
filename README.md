@@ -21,11 +21,55 @@ ScriptURL: https://script.google.com/macros/s/AKfycbwPpM8GRsH3jQ_0PUMWx0YL7N3bfJ
 
 ### Step 3
 Create in the markup of your html page a form with inputs. Make sure you give unique ids to each input field in the form.
+Blow is a snippet of the markup
+
+``` html
+<form id="fillthesheet">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Favourite Fruit</label>
+    <input type="text" class="form-control" id="FavFruit" placeholder="Fruit, e.g. orange, ovacado...">
+  </div>
+.........
+</form>
+```
 
 ### Step 4
 Next we'll need to write a few line of JavaScipt to prevent the default form sending processes and handle the form submission asynchonously with ajax and jsonp.
 Change the ScriptURL to ther script url acquired from step No. 2
-Write up a success callback for when the form is submitted. Here I just popup a paragraph that says informs of the success. 
+Write up a success callback for when the form is submitted. Here I just popup a paragraph that says informs of the success.
+
+``` javascript
+$( "#fillthesheet" ).submit(function( event ) {
+  event.preventDefault();
+
+  var showConfirmation = function (data){
+    $('#confirming').fadeIn(320).delay(1800).fadeOut(500);
+    console.log(data);
+  }
+
+
+  // Paste the url of your web app scriptUrl from step 2 below
+
+  var scriptUrl = "https://script.google.com/macros/s/AKfycbwPpM8GRsH3jQ_0PUMWx0YL7N3bfJtILoI_J3rgYHiyqtqLSaY/exec";
+  scriptUrl += '?' + $.param({
+    // Make sure the key: value parameters are in the following order
+    // SpreadsheetColumnHeader: input'sValue
+    'Favourite Fruit': $('#FavFruit').val()
+  });
+
+  $.ajax({
+      crossDomain: true,
+    url: scriptUrl,
+    method: "GET",
+    dataType: "jsonp",
+    success: showConfirmation
+  });
+});
+```
+
+_The full layout of the page can be seen in index.html_
+
+**Notice** that you wont be able to populate the spreadsheet withough having written atleast one column header name.
 
 ### Step 5
 That's it. Host your page and tell others to check it out and fill it out.

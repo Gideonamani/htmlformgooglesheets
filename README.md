@@ -17,7 +17,7 @@ Create a Google Script Macro by going Tools > Script editor...
 Clear out any deafult lines of code in the editor and copy the code from the GSCRIPT file in this repo and post it in your spreadsheet's script editor.
 Change the sheet variable, if need be, and the SpreadsheetID to your SpreadsheetID. Save the script. You'll be prometed to write a project name at first. Then Run > setup. Give authorization for the script to access the data in the spreadsheet.
 Go to Publish > Deploy as web app... To make sure anyone can post data into your spreadsheet through your html form, you'll need to set the execution of the app by you (it will say 'Me' in the deploy as web app prompt). Then make sure anyone can access the app evn anonymous to ensure that anyone can post to the sheet. You can make restriction as needed. Copy the script url of your now deployed web app, it'll be used in step No. 4.
-ScriptURL will look something like this: h t t p s://script.google.com/macros/s/AKfycbwPpM8GRsH3jQ_0PUMWx0YL7N3bfJtILoI_J3rgYHiyqtqLSaY/exec
+ScriptURL will look something like this: https://script.google.com/macros/s/{ GSCRIPT_CODE }/exec
 
 ### Step 3
 Create in the markup of your html page a form with inputs. Make sure you give unique ids to each input field in the form.

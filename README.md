@@ -72,7 +72,7 @@ _The full layout of the page can be seen in index.html_
 **Notice** that you wont be able to populate the spreadsheet withough having written atleast one column header name.
 
 ### Step 5
-That's it. Host your page and tell others to check it out and fill it out.
+That's it. [Host your page](https://gideonamani.github.io/htmlformgooglesheets/) and tell others to check it out and fill it out.
 
 
 
